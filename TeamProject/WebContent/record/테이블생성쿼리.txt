@@ -1,0 +1,19 @@
+CREATE TABLE user_tbl (
+userID varchar2(20),
+userPassword varchar2(20),
+PRIMARY key(userID)
+);
+
+CREATE TABLE BBS_TBL (
+num number(5),
+title varchar2(200),
+content varchar2(4000),
+userID varchar2(20),
+bbsDate TIMESTAMP,
+bbsPage number(38),
+content2 varchar2(4000),
+ctg varchar2(22),
+constraints fk_uid foreign key(userid)
+references user_tbl(userid),
+primary key(num)
+);
